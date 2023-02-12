@@ -257,10 +257,7 @@ footer {
 /* Page Not Found */
 .error404 .site-content {
   align-content: unset;
-  /* background-image(url(./assets/bg-404-sinatra.jpg));
-   */
-  /* background image with url */
-  background-image: url(./assets/bg-404-sinatra.jpg);
+  background-image: url(./images/bg-404-sinatra.jpg);
 }
 
 .error404 .error-page-wrapper {
@@ -278,14 +275,18 @@ footer {
   padding: 1rem;
   align-items: center;
   border: #aaa7a7 4px solid;
+  text-align: center;
 }
 
 .error404 .error-page-wrapper a {
   color: #fff;
 }
 
-.error404 .error-page-wrapper input {
-  margin-bottom: 1rem;
+.error404 .error-page-wrapper form div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  justify-content: center;
 }
 
 /* Medium */
@@ -362,6 +363,10 @@ footer {
   .error404 .error-page-contents {
     padding: 2rem;
     border: #aaa7a7 0.75rem solid;
+  }
+
+  .error404 .error-page-wrapper form div {
+    display: unset;
   }
 }
 
