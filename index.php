@@ -47,6 +47,22 @@
   </div>
 <?php endif; ?>
 
+<?php if( is_category() ): ?>
+  <div class="category-wrapper">
+    <h2 class="category-title">
+      Category: <?php single_cat_title(); ?>
+    </h2>
+  </div>
+<?php endif; ?>
+
+<?php if( is_tag() ): ?>
+  <div class="tag-wrapper">
+    <h2 class="tag-title">
+      Tag: <?php single_cat_title(); ?>
+    </h2>
+  </div>
+<?php endif; ?>
+
 <?php
   if (have_posts()):
     while (have_posts()):

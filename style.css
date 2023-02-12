@@ -232,7 +232,9 @@ footer {
 }
 
 .error404 .error-page-wrapper,
-.search-results-heading-meta-wrapper {
+.search-results-heading-meta-wrapper,
+.category-wrapper,
+.tag-wrapper {
   grid-column: 1/-1;
 }
 
