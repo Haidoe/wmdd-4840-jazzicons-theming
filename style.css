@@ -61,7 +61,8 @@ footer ul {
 
 .site-title,
 .post-title,
-.error404 .error-page-title {
+.error404 .error-page-title,
+.category-desc p:first-of-type {
   font-family: "Bebas Neue", sans-serif;
 }
 
@@ -269,7 +270,7 @@ footer {
 }
 
 .error404 .error-page-contents {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(59, 58, 58, 0.8);
   display: flex;
   flex-direction: column;
   padding: 1rem;
@@ -287,6 +288,32 @@ footer {
   flex-wrap: wrap;
   gap: 0.3rem;
   justify-content: center;
+}
+
+/* Category Description */
+.category-desc {
+  padding: 1rem;
+}
+
+.category-desc p {
+  margin: 0;
+}
+
+.category-desc p:first-of-type {
+  font-size: 1.25rem;
+}
+
+.category-desc p:first-of-type::before,
+.category-desc p:first-of-type::after {
+  content: '"';
+}
+
+.category-desc p:last-of-type::before {
+  content: "[ ";
+}
+
+.category-desc p:last-of-type::after {
+  content: " ]";
 }
 
 /* Medium */

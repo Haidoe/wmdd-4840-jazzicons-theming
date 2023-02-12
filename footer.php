@@ -2,6 +2,12 @@
     </div>
 
     <footer class="site-footer">
+      <?php if( is_category() && strlen(category_description()) > 0 ):?>
+        <div class="category-desc">
+          <?php echo category_description(); ?>
+        </div>
+      <?php endif; ?>
+
       <?php
         wp_nav_menu(array(
           "theme_location" => "footer_menu",
