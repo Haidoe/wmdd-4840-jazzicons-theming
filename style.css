@@ -24,6 +24,7 @@ body {
   margin: 0;
   line-height: 1.5;
   font-family: "Lora", "Georgia", "Times New Roman", Times, serif;
+  min-width: 320px;
 }
 
 h1,
@@ -59,7 +60,8 @@ footer ul {
 }
 
 .site-title,
-.post-title {
+.post-title,
+.error404 .error-page-title {
   font-family: "Bebas Neue", sans-serif;
 }
 
@@ -224,6 +226,7 @@ footer {
   align-content: unset;
 }
 
+.error404 .error-page-wrapper,
 .search-results-heading-meta-wrapper {
   grid-column: 1/-1;
 }
@@ -241,6 +244,7 @@ footer {
   color: rgb(119, 136, 153);
 }
 
+.error404 .error-page-wrapper form input,
 .search-no-results .search-results-heading-meta-wrapper form input {
   background-color: rgb(119, 136, 153);
   color: #fff;
@@ -248,6 +252,40 @@ footer {
   border: 2px solid rgb(173, 184, 193);
   padding: 0.15rem 0.5rem;
   font-size: 1.15rem;
+}
+
+/* Page Not Found */
+.error404 .site-content {
+  align-content: unset;
+  /* background-image(url(./assets/bg-404-sinatra.jpg));
+   */
+  /* background image with url */
+  background-image: url(./assets/bg-404-sinatra.jpg);
+}
+
+.error404 .error-page-wrapper {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.error404 .error-page-contents {
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  align-items: center;
+  border: #aaa7a7 4px solid;
+}
+
+.error404 .error-page-wrapper a {
+  color: #fff;
+}
+
+.error404 .error-page-wrapper input {
+  margin-bottom: 1rem;
 }
 
 /* Medium */
@@ -314,6 +352,16 @@ footer {
 
   footer .menu-main ul {
     justify-content: center;
+  }
+
+  /* Page 404 */
+  .error404 .error-page-title {
+    font-size: 4rem;
+  }
+
+  .error404 .error-page-contents {
+    padding: 2rem;
+    border: #aaa7a7 0.75rem solid;
   }
 }
 
