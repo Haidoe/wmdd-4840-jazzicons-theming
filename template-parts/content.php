@@ -3,23 +3,29 @@
 
 <article <?php post_class(); ?>>
   <h2 class="post-title">
-    <a href="<?php the_permalink(); ?>">
+    <?php if( is_single() ): ?>
       <?php the_title(); ?>
-    </a>
+    <?php else: ?>
+      <a href="<?php the_permalink(); ?>">
+        <?php the_title(); ?>
+      </a>
+    <?php endif; ?>
   </h2> 
 
   <div class="post-meta">
    Posted on
     <span>
-      <?php the_modified_date(); ?>
+      <?php echo get_the_date('M j Y'); ?>
     </span>
   </div>
 
-  <div class="post-feature-image">
-    <a href="<?php the_permalink(); ?>">
-      <?php the_post_thumbnail(); ?>
-    </a>
-  </div>
+  <?php if( !is_single() ): ?>
+    <div class="post-feature-image">
+      <a href="<?php the_permalink(); ?>">
+        <?php the_post_thumbnail(); ?>
+      </a>
+    </div>
+  <?php endif; ?>
   
   <div class="post-content">
     <?php 
