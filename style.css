@@ -1,0 +1,258 @@
+/*
+Theme Name: jazzicons haidren amalia 
+Theme URI: https://wordpress.org/themes/twentytwenty/
+Author: Haidren Amalia
+Author URI: https://wordpress.org/
+Description: Our default theme for 2020 is designed to take full advantage of the flexibility of the block editor. Organizations and businesses have the ability to create dynamic landing pages with endless layouts using the group and column blocks. The centered content column and fine-tuned typography also makes it perfect for traditional blogs. Complete editor styles give you a good idea of what your content will look like, even before you publish. You can give your site a personal touch by changing the background colors and the accent color in the Customizer. The colors of all elements on your site are automatically calculated based on the colors you pick, ensuring a high, accessible color contrast for your visitors.
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+Version: 1.3
+Requires at least: 5.0
+Tested up to: 5.4
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: jazzicons-ha
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  line-height: 1.4;
+  font-family: "Lora", "Georgia", "Times New Roman", Times, serif;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+header {
+  background-color: rgb(119, 136, 153);
+  padding: 0.5rem 2%;
+  padding-bottom: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+header ul,
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-title,
+.post-title {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.site-title {
+  font-size: 3rem;
+  line-height: normal;
+}
+
+.site-info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.site-info,
+.site-info a,
+.post-title,
+.post-title a,
+nav.menu-main a {
+  text-decoration: none;
+  color: #000;
+}
+
+.menu-main ul {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.2rem;
+}
+
+.menu-main ul li {
+  flex: 1 0 auto;
+}
+
+.menu-main ul li:nth-of-type(4) {
+  order: -1;
+}
+
+.menu-main ul a {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.current-menu-item {
+  font-weight: bold;
+}
+
+.site-header-addons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.site-header-addons form div {
+  display: flex;
+  justify-content: center;
+  gap: 0.3rem;
+}
+
+.site-header-addons form input {
+  outline: none;
+  border: 2px solid #fff;
+
+  color: white;
+  background-color: rgba(255, 255, 255, 0.4);
+  font-size: 1.15rem;
+}
+
+/* Main Content */
+.site-content {
+  padding: 1.5rem 2%;
+  display: grid;
+  gap: 2rem;
+}
+
+.site-content article {
+  display: grid;
+}
+
+.post-title,
+.post-title a {
+  color: rgb(119, 136, 153);
+}
+
+.post-content p {
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.post-footer > div {
+  display: flex;
+  font-size: 0.85rem;
+}
+
+.post-footer > div > span {
+  font-weight: bold;
+  flex: 0 0 80px;
+}
+
+.post-footer > div a {
+  color: #8a8888;
+  text-decoration: none;
+  text-transform: lowercase;
+}
+/* Footer */
+
+footer {
+  background-color: rgb(119, 136, 153);
+  padding: 1rem 2% 2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Medium */
+@media screen and (min-width: 768px) {
+  header {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .site-title {
+    font-size: 7rem;
+  }
+
+  .site-info {
+    text-align: left;
+  }
+
+  .site-header-addons {
+    justify-content: center;
+  }
+
+  .menu-main ul {
+    justify-content: flex-end;
+  }
+
+  .menu-main ul li {
+    flex: unset;
+  }
+
+  .menu-main ul a {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .site-header-addons form div {
+    justify-content: flex-end;
+  }
+
+  .site-content article {
+    grid-template-columns: 3fr 5fr;
+  }
+
+  .site-content article h2,
+  .site-content article .post-meta {
+    grid-column: 1 / -1;
+  }
+
+  .site-content article .post-meta {
+    font-size: 0.8rem;
+  }
+
+  .site-content article .post-feature-image {
+    align-self: start;
+  }
+
+  .site-content article .post-content {
+    grid-column: 2 / -1;
+    grid-row: span 5;
+    margin-left: 1rem;
+  }
+
+  .site-content article .post-content p {
+    margin-bottom: 0;
+  }
+
+  footer .menu-main ul {
+    justify-content: center;
+  }
+}
+
+/* Large Screen */
+@media screen and (min-width: 1200px) {
+  header {
+    grid-template-columns: 2fr 3fr;
+  }
+
+  .menu-main ul a {
+    padding: 0.5rem;
+  }
+
+  .site-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Largest Screen */
+@media screen and (min-width: 1600px) {
+  .site-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
