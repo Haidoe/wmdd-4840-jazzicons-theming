@@ -107,6 +107,10 @@ nav.menu-main a {
   text-align: center;
 }
 
+.menu-main ul a:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
 .current-menu-item {
   font-weight: bold;
 }
@@ -156,12 +160,12 @@ nav.menu-main a {
 
 .post-footer > div {
   display: flex;
-  font-size: 0.85rem;
+  font-size: 0.7rem;
 }
 
 .post-footer > div > span {
   font-weight: bold;
-  flex: 0 0 80px;
+  flex: 0 0 60px;
 }
 
 .post-footer > div a {
